@@ -1,0 +1,80 @@
+/* 
+
+font-family: "Droid Sans", sans-serif;
+font-family: "Titillium Web", sans-serif; 
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  min-width: 290px;
+  background-color: #edede9;
+  color: black;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(199, 199, 199);
+  border-radius: 10px;
+}
+
+nav {
+  font-family: "Poppins", sans-serif;
+}
+.landing-page p {
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 2px;
+}
+.carpartners h2 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+.barpage {
+  font-family: "Poppins", sans-serif;
+}
+.services {
+  font-family: "Poppins", sans-serif;
+}
+.logo {
+  font-family: "Droid Sans", sans-serif;
+}
+.loading {
+  font-family: "Droid Sans", sans-serif;
+}
