@@ -49,7 +49,6 @@ const LandingPage = () => {
         Start Your Trip Today
       </h2>
       <BarPage />
-      EE
       <OurServices />
     </>
   );

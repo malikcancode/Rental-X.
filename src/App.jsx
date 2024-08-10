@@ -1,11 +1,10 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import { CartProvider } from "./context/CartContext";
-import Loading from "./Pages/Loading";
 import ProtectedRoute from "./context/ProtectedRoute";
 import NotFound from "./Pages/NotFound";
+import Loading from "./Pages/Loading";
+import Navbar from "./Pages/Navbar";
 
-const Navbar = lazy(() => import("./Pages/Navbar"));
 const LandingPage = lazy(() => import("./Pages/LandingPage"));
 const CarDetails = lazy(() => import("./Pages/CarDetails"));
 const SelectCars = lazy(() => import("./Pages/SelectCars"));
@@ -16,7 +15,7 @@ const About = lazy(() => import("./Pages/About"));
 
 function App() {
   return (
-    <CartProvider>
+    <>
       <Navbar />
       <Suspense fallback={<Loading />}>
         <Routes>
@@ -32,7 +31,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
-    </CartProvider>
+    </>
   );
 }
 
