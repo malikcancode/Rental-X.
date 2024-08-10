@@ -36,7 +36,7 @@ const LandingPage = () => {
 
             <div className="w-full md:w-1/2 p-4 hidden sm:block">
               <img
-                src="/public/1723014619345z0172i1g.webp"
+                src="/1723014619345z0172i1g.webp"
                 alt="Car"
                 className="w-full h-auto"
               />
@@ -49,6 +49,7 @@ const LandingPage = () => {
         Start Your Trip Today
       </h2>
       <BarPage />
+      EE
       <OurServices />
     </>
   );
