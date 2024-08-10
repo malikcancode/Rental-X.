@@ -2,6 +2,14 @@ import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { useNavigate } from "react-router-dom";
+import L from "leaflet";
+
+const customIcon = new L.Icon({
+  iconUrl: "/logos/NicePng_marker-circle-png_1015767.png",
+  iconSize: [60, 60],
+  iconAnchor: [19, 38],
+  popupAnchor: [0, -38],
+});
 
 const LocationUpdater = ({ userLocation }) => {
   const map = useMap();
@@ -84,7 +92,7 @@ const BarPage = () => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
           <LocationUpdater userLocation={userLocation} />
-          <Marker position={userLocation}>
+          <Marker position={userLocation} icon={customIcon}>
             <Popup>Your City</Popup>
           </Marker>
         </MapContainer>
